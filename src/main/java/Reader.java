@@ -20,6 +20,9 @@ public class Reader extends Thread {
         time = new Date();
         dt1 = new SimpleDateFormat("HH:mm:ss");
         dTime = dt1.format(time);
+        in = client.getIn();
+        out = client.getOut();
+        inputUser = client.getInputUser();
     }
 
     @Override

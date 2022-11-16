@@ -12,9 +12,6 @@ class ChatClient {
     private String host;
     private int port;
     private String nickname;
-    private Date time;
-    private String dTime;
-    private SimpleDateFormat dt1;
     File logFile;
     BufferedWriter logger;
 
@@ -95,15 +92,7 @@ class ChatClient {
         return host;
     }
 
-    public Date getTime() {
-        return time;
-    }
-
     public String getNickname() {
         return nickname;
-    }
-
-    public String getDTime() {
-        return dTime;
     }
 }
