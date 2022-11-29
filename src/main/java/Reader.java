@@ -37,6 +37,7 @@ public class Reader extends Thread {
                 } else {
                     out.write("(" + dTime + ") " + nickname + ": " + userWord + "\n");
                 }
+                System.out.println("(" + dTime + ") " + nickname + ": " +userWord);
                 out.flush();
             } catch (IOException ex) {
                 ex.printStackTrace();

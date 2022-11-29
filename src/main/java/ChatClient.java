@@ -28,11 +28,7 @@ class ChatClient {
             System.out.println(ex.getMessage());
         }
         try {
-            this.socket = new Socket(host, port);
-        } catch (IOException e) {
-            System.err.println("Socket failed");
-        }
-        try {
+            this.socket = new Socket("localhost", port);
             inputUser = new BufferedReader(new InputStreamReader(System.in));
             in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             out = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
@@ -40,6 +36,7 @@ class ChatClient {
             new Writer(this).start();
             new Reader(this).start();
         } catch (IOException e) {
+            e.printStackTrace();
             downService();
         }
     }
